@@ -179,7 +179,7 @@ def xxr():
     os.system('clear')
     print(logo)
     limit = int(input(f'\033[0;97m[{xr}^{x}]\033[0;92m EXAMPLE : \033[38;5;208m10000, \x1b[38;5;208m20000, \033[38;5;208m50000 ] \n\033[38;5;208m═════════════════════════════════════════ \n\033[0;97m[{xr}^{x}] \033[0;92mGIVE CRACKING LIMIT:\033[0;93m '))
-    for nmbr in range(LIMIT):
+    for nmbr in range(limit):
         nmp = ''.join(random.choice(string.digits) for _ in range(7))
         user.append(nmp)
     os.system("clear")
