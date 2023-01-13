@@ -196,7 +196,7 @@ def xxr():
         jalan('\033[1;97m====================================================')
         jalan(f'[{xr}^{x}]\x1b[38;5;208m  IDS: {xr}'+tl)
         jalan(f'{x}[{xr}^{x}]\033[0;92m  STARTED')
-        jalan(f'\033[0;97m[{xr}^{x}]\033[0;93m MOBILE)
+        jalan(f'\033[0;97m[{xr}^{x}]\033[0;93m MOBILE')
         jalan(f'\033[0;97m[{xr}^{x}] \x1b[38;5;208mAIR PLAN MODE FOR SPEED')
         jalan(f'\033[0;97m[{xr}^{x}] \033[0;95mID WILL COMING SOON')
         jalan('\033[1;97m====================================================')
