@@ -1,4 +1,1 @@
-<h3><b><i>🏆 Github Statistics :</i></b></h3>
-
-<a href="https://github.com/MUHIB-143"><img title="trophy" src="https://github-profile-trophy.vercel.app/?username=MAHADI-143&theme=monokai"></a>
- 
+![1685107166753](https://github.com/MUHIB-143/CONTROL-ROOM/assets/122245772/a46bf1a8-ce25-4258-890d-6ca9e85aac4d)
