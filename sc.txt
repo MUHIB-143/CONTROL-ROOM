@@ -1,1 +1,1 @@
-key_day=7
+key_day=7s
