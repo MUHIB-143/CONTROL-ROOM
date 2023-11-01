@@ -1,8 +1,0 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    int result = system("python __protect__");
-
-    return 0;
-}
