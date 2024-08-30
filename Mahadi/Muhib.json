@@ -145,11 +145,6 @@
         "length": 22987
     },
     {
-        "path": "/data/data/com.termux/files/usr/lib/python3.11/_sysconfigdata__linux_.py",
-        "file": "_sysconfigdata__linux_.py",
-        "length": 52435
-    },
-    {
         "path": "/data/data/com.termux/files/usr/lib/python3.11/uuid.py",
         "file": "uuid.py",
         "length": 27548
