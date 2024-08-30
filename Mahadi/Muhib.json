@@ -3365,11 +3365,6 @@
         "length": 854
     },
     {
-        "path": "/data/data/com.termux/files/usr/lib/python3.11/site-packages/pip/__pip-runner__.py",
-        "file": "__pip-runner__.py",
-        "length": 1444
-    },
-    {
         "path": "/data/data/com.termux/files/usr/lib/python3.11/site-packages/pip/_vendor/__init__.py",
         "file": "__init__.py",
         "length": 4993
