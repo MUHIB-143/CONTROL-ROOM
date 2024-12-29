@@ -1,45 +1,149 @@
-# 🚧 Coming Soon 🚧
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run and Jump Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB;
+        }
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Coming%20Soon-blue.svg?style=for-the-badge" alt="Coming Soon">
-</p>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #87CEEB;
+        }
 
----
+        #score {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
 
-## 📅 Project Launch: **Coming Soon**
+<canvas id="gameCanvas"></canvas>
+<div id="score">Score: 0</div>
 
-Thank you for visiting! We are in the process of building something exciting, and we appreciate your patience. Our team is working hard to bring you an enhanced experience with new features, improvements, and much more.
+<script>
+    // Set up the game canvas
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-### What to Expect:
+    // Game Variables
+    let score = 0;
+    let gravity = 0.5;
+    let friction = 0.98;
+    let isJumping = false;
+    let jumpPower = 10;
+    let gameSpeed = 5;
 
-- 🚀 **New Features** – A suite of tools designed to simplify and elevate your experience.
-- ⚙️ **Performance Improvements** – Optimized code and speed enhancements.
-- 🎨 **Fresh Design** – A modern, user-friendly interface.
+    // Player variables
+    const player = {
+        width: 50,
+        height: 50,
+        x: 100,
+        y: canvas.height - 100,
+        speedX: 0,
+        speedY: 0,
+        color: '#FF6347',
+        jumping: false,
+    };
 
-### Stay Informed:
+    // Ground variables
+    const ground = {
+        y: canvas.height - 50,
+        width: canvas.width,
+        height: 50,
+        color: '#2E8B57'
+    };
 
-We invite you to stay connected for updates and announcements:
+    // Obstacles array
+    const obstacles = [];
 
-- **Follow us on GitHub**: [GitHub Profile](https://github.com/your-profile)
-- **Follow us on Twitter**: [@YourTwitterHandle](https://twitter.com/your-profile)
-- **Visit our Website**: [www.example.com](https://www.example.com)
+    // Controls
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && !player.jumping) {
+            player.jumping = true;
+            player.speedY = -jumpPower;
+        }
+    });
 
----
+    // Game loop
+    function gameLoop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-## ⏳ What’s Next:
+        // Player mechanics
+        player.speedY += gravity;
+        player.y += player.speedY;
+        if (player.y > ground.y - player.height) {
+            player.y = ground.y - player.height;
+            player.speedY = 0;
+            player.jumping = false;
+        }
 
-We’re actively working behind the scenes and can’t wait to share more with you. We will update this page as soon as we have more details about the project timeline.
+        // Moving the player
+        ctx.fillStyle = player.color;
+        ctx.fillRect(player.x, player.y, player.width, player.height);
 
----
+        // Moving obstacles
+        for (let i = 0; i < obstacles.length; i++) {
+            const obstacle = obstacles[i];
+            obstacle.x -= gameSpeed;
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+            if (obstacle.x + obstacle.width < 0) {
+                obstacles.splice(i, 1);
+                score++;
+            }
 
-### 📣 Contact Information
+            // Collision detection
+            if (player.x < obstacle.x + obstacle.width &&
+                player.x + player.width > obstacle.x &&
+                player.y < obstacle.y + obstacle.height &&
+                player.y + player.height > obstacle.y) {
+                    gameOver();
+            }
+        }
 
-If you have any questions or would like to get in touch, please feel free to reach out:
+        // Score display
+        document.getElementById('score').textContent = `Score: ${score}`;
 
-- **Email**: [support@example.com](mailto:support@example.com)
-- **Community Support**: [Community Forum](https://community.example.com)
+        // Add new obstacles
+        if (Math.random() < 0.02) {
+            const height = Math.random() * (canvas.height / 2) + 20;
+            obstacles.push({
+                x: canvas.width,
+                y: ground.y - height,
+                width: 50,
+                height: height
+            });
+        }
 
----
+        requestAnimationFrame(gameLoop);
+    }
 
-> _"Great things are on the way. We are building something worth the wait."_  
-– The Team at [Your Project Name]
+    // Game Over
+    function gameOver() {
+        alert(`Game Over! Your score is ${score}`);
+        score = 0;
+        obstacles.length = 0;
+        player.x = 100;
+        player.y = canvas.height - 100;
+        player.speedY = 0;
+        player.jumping = false;
+    }
+
+    // Start the game
+    gameLoop();
+</script>
+</body>
+</html>
